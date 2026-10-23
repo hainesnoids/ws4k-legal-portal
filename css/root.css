@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", "Roboto Flex", "Noto Sans", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+main > :first-child {
+    margin-top: 0 !important;
+}
+
+main > :last-child {
+    margin-bottom: 0 !important;
+}
+
+body {
+    margin: 0;
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 140px;
+    padding: 8px 5%;
+    top: 0;
+    background-color: #087FE7;
+    background: linear-gradient(to bottom, #82a3f0, #3d6da9);
+    display: flex;
+    justify-content: left;
+
+    z-index: 1001;
+    align-items: center;
+}
+header h1 {
+    color: white;
+    margin: 0 12px;
+    padding: 0 12px;
+    border-left: 2px solid white;
+    font-size: 28pt;
+}
+
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 35px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e3e3e3 50%, #e6e6e6 70%,#fcfcfc 120%);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+nav a {
+    height: 100%;
+    width: min-content;
+    text-wrap: nowrap;
+    padding: 12px;
+    border-right: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11pt;
+    text-decoration: none;
+    color: unset;
+}
+.blog-feed {
+    margin-left: auto;
+    border-right: none;
+    border-left: 1px solid #cecece;
+}
+hr {
+    border-width: 0 0 1px 0;
+}
+hr.full {
+    position: relative;
+    left: -6%;
+    width: 112%;
+}
+
+footer {
+    width: 1000px;
+    max-width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    color: #606060;
+    font-size: 10pt;
+}
+
+div.main footer {
+    background-color: #404040;
+    height: 56px;
+}
+
+div.main footer span {
+    color: #c3c3c3;
+}
+
+.header-logo {
+    height: 48px;
+    width: auto;
+}
+
+div.main {
+    width: 1000px;
+    height: fit-content;
+    margin: 0;
+    max-width: 100%;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: 8px -2px 16px rgba(0,0,0,0.3),-8px 0px 16px rgba(0,0,0,0.3);
+}
+
+main {
+    padding: 16px 5%;
+}
+
+/* clearfix hack to prevent image overflow. check out the W3Schools page on it. */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.image-left img {
+    float: left;
+    width: 300px;
+    max-width: 100%;
+    margin: 5px;
+}
+.image-right img {
+    float: right;
+    width: 300px;
+    max-width: 100%;
+    margin: 5px;
+}
+iframe.component {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+header:has(iframe.component),
+nav:has(iframe.component){
+    padding: 0;
+    border: none;
+}
